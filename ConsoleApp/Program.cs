@@ -6,7 +6,7 @@ namespace ConsoleApp
 {
     class Program
     {
-        static void Main (string[] args)
+        static void Main ()
         {
             //Intro.Speak ();
 
@@ -14,7 +14,8 @@ namespace ConsoleApp
             //DisposableRefStructs.Showcase ();
             //UsingDeclarations.Showcase ();
             //await AsyncStreams.Showcase ();
-            StaticLocalFunctions.Showcase ();
+            //StaticLocalFunctions.Showcase ();
+            PatternMatching.Demo ();
         }
     }
 }
