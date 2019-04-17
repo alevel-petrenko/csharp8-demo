@@ -14,6 +14,7 @@ namespace ConsoleApp
         static void Hello()
         {
             // http://twitter.com/_TLK
+            // http://github.com/kolesnick
 
             // http://t.me/kharkivaltnet
             // http://fb.me/kharkivaltnet
