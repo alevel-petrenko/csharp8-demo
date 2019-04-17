@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using static System.Console;
 using static System.String;
 
@@ -7,10 +7,11 @@ namespace ConsoleApp
 {
     class Program
     {
-        static void Main (string[] args)
+        static async Task Main (string[] args)
         {
-            Intro.Speak ();
-            //IndicesAndRanges.Demo ();
+            //Intro.Speak ();
+            //IndicesAndRanges.Showcase ();
+            await AsyncStreams.Showcase ();
         }
     }
 }
