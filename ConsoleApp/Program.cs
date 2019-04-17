@@ -10,7 +10,8 @@ namespace ConsoleApp
         {
             //Intro.Speak ();
             //IndicesAndRanges.Demo ();
-            DisposableRefStructs.Showcase();
+            //DisposableRefStructs.Showcase ();
+            UsingDeclarations.Showcase ();
             //await AsyncStreams.Showcase ();
         }
     }
