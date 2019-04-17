@@ -10,7 +10,7 @@ namespace ConsoleApp
         static void Main (string[] args)
         {
             Intro.Speak ();
-            IndicesAndRanges.Demo ();
+            //IndicesAndRanges.Demo ();
         }
     }
 }
