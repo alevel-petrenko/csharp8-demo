@@ -9,10 +9,12 @@ namespace ConsoleApp
         static void Main (string[] args)
         {
             //Intro.Speak ();
+
             //IndicesAndRanges.Demo ();
             //DisposableRefStructs.Showcase ();
-            UsingDeclarations.Showcase ();
+            //UsingDeclarations.Showcase ();
             //await AsyncStreams.Showcase ();
+            StaticLocalFunctions.Showcase ();
         }
     }
 }
