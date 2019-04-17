@@ -17,8 +17,8 @@ namespace ConsoleApp
         {
             for (int i = 0; i < 60; i++)
             {
-                await Delay (1000);
                 yield return i;
+                await Delay (1000);
             }
         }
     }
