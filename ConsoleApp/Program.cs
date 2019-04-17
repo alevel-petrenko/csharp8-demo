@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Linq;
+using static System.Console;
+using static System.String;
 
 namespace ConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main (string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Intro.Speak ();
+            IndicesAndRanges.Demo ();
         }
     }
 }
