@@ -21,7 +21,7 @@ namespace ConsoleApp
             //StaticLocalFunctions.Showcase ();
 
             //if (Now.Hour >= 20 && Now.Minute >= 30)
-            //    Thread.Sleep(TimeSpan.FromMinutes(5));
+            //    Thread.Sleep (TimeSpan.FromMinutes (5));
 
             //PatternMatching.Demo ();
 
@@ -29,7 +29,7 @@ namespace ConsoleApp
             //NullableReferenceTypes.Demo ();
             //ScreenToGif.Showcase ();
 
-            Tickets.Giveaway ();
+            //Tickets.Giveaway ();
 
             //Credits.Show ();
         }
