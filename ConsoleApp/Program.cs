@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.DateTime;
 using static System.String;
 
 namespace ConsoleApp
@@ -18,7 +20,8 @@ namespace ConsoleApp
             //await AsyncStreams.Showcase ();
             //StaticLocalFunctions.Showcase ();
 
-            //Thread.Sleep (TimeSpan.FromMinutes (5));
+            //if (Now.Hour >= 20 && Now.Minute >= 30)
+            //    Thread.Sleep(TimeSpan.FromMinutes(5));
 
             //PatternMatching.Demo ();
 
