@@ -16,14 +16,14 @@ namespace ConsoleApp
             //IndicesAndRanges.Demo ();
 
             //DisposableRefStructs.Showcase ();
-            //UsingDeclarations.Showcase ();
+            //UsingDeclarations.Showcase();
             //await AsyncStreams.Showcase ();
-            //StaticLocalFunctions.Showcase ();
+            //StaticLocalFunctions.Showcase();
 
             //if (Now.Hour >= 20 && Now.Minute >= 30)
             //    Thread.Sleep (TimeSpan.FromMinutes (5));
 
-            //PatternMatching.Demo ();
+            //PatternMatching.Demo();
 
             //BillionDollarMistake.Read ();
             //NullableReferenceTypes.Demo ();
@@ -31,7 +31,7 @@ namespace ConsoleApp
 
             //Tickets.Giveaway ();
 
-            //Credits.Show ();
+            Credits.Show ();
         }
     }
 }

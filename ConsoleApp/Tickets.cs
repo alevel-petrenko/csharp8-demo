@@ -53,6 +53,10 @@ namespace ConsoleApp
 
         public static void Giveaway ()
         {
+            //Яков Олейник
+            //Сергей Руденко
+            //Александра Строна
+
             WriteLine (RandomAttendee ());
             WriteLine (RandomAttendee ());
             WriteLine (RandomAttendee ());

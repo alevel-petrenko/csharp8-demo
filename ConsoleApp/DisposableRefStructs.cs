@@ -8,7 +8,9 @@ namespace ConsoleApp
         public static void Showcase ()
         {
             using (var x = new RefStruct ())
+            {
                 WriteLine ("I pretend to use ref struct here.");
+            }
         }
 
         ref struct RefStruct

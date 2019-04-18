@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using static System.Console;
+
 // ReSharper disable UseUsingVarLocalVariable
 
 namespace ConsoleApp
@@ -8,25 +10,21 @@ namespace ConsoleApp
     {
         public static void Showcase ()
         {
-            Before ();
-            //After ();
+            //Before ();
+            After ();
         }
 
         static void Before ()
         {
             using (var stream = new MemoryStream ())
+            using (var writer = new StreamWriter (stream) { AutoFlush = true })
             {
-                using (var writer = new StreamWriter (stream) { AutoFlush = true })
-                {
-                    writer.Write ("Memory stream contains this.");
+                using (var reader = new StreamReader (stream))
+                    WriteLine (reader.ReadToEnd ());
 
-                    stream.Position = 0;
+                writer.Write ("Memory stream contains this.");
 
-                    using (var reader = new StreamReader (stream))
-                    {
-                        Console.WriteLine (reader.ReadToEnd ());
-                    }
-                }
+                stream.Position = 0;
             }
         }
 
@@ -41,7 +39,7 @@ namespace ConsoleApp
 
             using var reader = new StreamReader(stream);
 
-            Console.WriteLine(reader.ReadToEnd());
+            WriteLine(reader.ReadToEnd());
         }
     }
 }

@@ -13,24 +13,7 @@ namespace ConsoleApp
             "All those moments will be lost in time, like tears in rain. " + // 12
             "Time to die."; // 3
 
-        public static void Demo () => Demo1 (); // of 5
-
-        static void Demo1 ()
-        {
-            string[] words = TearsInRain.Split (' ');
-
-            WriteLine (words[3]); // you
-            WriteLine (words[5]); // wouldn't
-            WriteLine (words[41]); // die
-        }
-
-        static void Demo2 ()
-        {
-            string[] words = TearsInRain.Split (' ');
-
-            for (int index = 0; index < words.Length; index++)
-                WriteLine (words[index]);
-        }
+        public static void Demo () => Demo5 (); // of 5
 
         static void Demo3 ()
         {
@@ -39,16 +22,33 @@ namespace ConsoleApp
                 "I've", "seen", "things", "you", "people", "wouldn't", "believe."
             };
 
-            string[] range = words[1..3]; // play here
+            string[] range = words[..3]; // play here
 
             WriteLine (string.Join (' ', range));
+        }
+
+        static void Demo2 ()
+        {
+            string[] words = TearsInRain.Split (' ');
+
+            for (int index = 0; index < words.Length; index++)
+                WriteLine (words[^index]);
+        }
+
+        static void Demo1 ()
+        {
+            string[] words = TearsInRain.Split (' ');
+
+            WriteLine (words[3]); // you
+            WriteLine (words[5]); // wouldn't
+            WriteLine (words[^1]); // die
         }
 
         static void Demo4 ()
         {
             Span<string> words = TearsInRain.Split(' ').AsSpan();
 
-            var lastWords = words[^3..];
+            Span<string> lastWords = words[^4..];
 
             foreach (var word in lastWords)
                 WriteLine (word);

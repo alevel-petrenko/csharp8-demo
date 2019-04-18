@@ -12,21 +12,16 @@ namespace ConsoleApp
 
     internal class PatternMatching
     {
-        public static void Demo () => Demo1 (Yesterday); // of 4
+        public static void Demo () => Demo4 (); // of 4
 
-        static void Demo1 (Day day)
-        {
-            var date =
-                day switch
-                {
-                    Yesterday => DateTime.Today.AddDays (-1),
-                    Today     => DateTime.Today,
-                    Tomorrow  => DateTime.Today.AddDays (-1),
-                    _         => throw new ArgumentOutOfRangeException (nameof(day)),
-                };
-
-            WriteLine (date); // TODO: refactor
-        }
+        static void Demo1 (Day day) =>
+            WriteLine (day switch
+            {
+                Yesterday => DateTime.Today.AddDays (-1),
+                Today     => DateTime.Today,
+                Tomorrow  => DateTime.Today.AddDays (-1),
+                _         => throw new ArgumentOutOfRangeException (nameof(day)),
+            });
 
         static void Demo2 ()
         {
@@ -41,7 +36,7 @@ namespace ConsoleApp
                 { Price:    Expensive } => High,
                 { Estimate: Yesterday } => High,
                 { Estimate: Tomorrow }  => Low,
-                _                       => Normal, // TODO: Bug
+                _                       => Normal,
             };
 
         static void Demo3 () =>
@@ -66,11 +61,14 @@ namespace ConsoleApp
         static Priority Priority (Feature feature) =>
             feature switch
             {
-                (Expensive, _) => High,
+                (Expensive, _) => VeryHigh(),
                 (_, Yesterday) => High,
                 (_, Tomorrow)  => Low,
-                _ =>           Normal, // TODO: Enhancement
+                Enhancement _  => Low, 
+                (_,_)          => Normal,
             };
+
+        static Priority VeryHigh () => throw new Exception ("Please do this!");
 
         class Task
         {

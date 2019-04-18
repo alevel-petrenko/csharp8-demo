@@ -6,7 +6,7 @@ namespace ConsoleApp
 {
     internal static class NullableReferenceTypes
     {
-        public static void Demo () => Demo1 (); // of 5
+        public static void Demo () => Demo5 (); // of 5
 
         static void Demo1 ()
         {
@@ -20,16 +20,17 @@ namespace ConsoleApp
             int doubleLength = 2 * length;
             WriteLine (doubleLength);
         }
-
+        
         static int Length (string s) => s.Length;
+        static int? LengthUnsafe (string? s) => s?.Length;
 
         static void Demo2 ()
         {
             LogLength ("12345");
-            // TODO: LogLength (null);
+            LogLength (null);
         }
 
-        static void LogLength (string value) => WriteLine (Length (value));
+        static void LogLength (string? value) => WriteLine (LengthUnsafe (value));
 
         static void Demo3 ()
         {
@@ -42,7 +43,7 @@ namespace ConsoleApp
         static void Demo4 ()
         {
             Module.LogLength ("12345");
-            // TODO: Module.LogLength (null);
+            Module.LogLengthUnsafe (null);
         }
 
         static void Demo5 ()
