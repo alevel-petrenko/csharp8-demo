@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static System.String;
@@ -24,8 +23,10 @@ namespace ConsoleApp
             //PatternMatching.Demo ();
 
             //BillionDollarMistake.Read ();
-            NullableReferenceTypes.Demo ();
+            //NullableReferenceTypes.Demo ();
             //ScreenToGif.Showcase ();
+
+            Tickets.Giveaway ();
 
             //Credits.Show ();
         }
